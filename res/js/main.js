@@ -2,6 +2,8 @@ const cookie = document.getElementById("cookie");
 const counter = document.getElementById("counter");
 const autoclicker = document.getElementById("autoclicker");
 const clickupgrade = document.getElementById("clickupgrade");                //tady vše se propojuje s html idečkama
+const autoclicker2 = document.getElementById("autoclicker2");
+const autoclicker3 = document.getElementById("autoclicker3");
 
 let number = 0;             //nazev čísel těch cookiesek které jsme naklikali
 
@@ -10,6 +12,12 @@ let autoclickerIncrease = 0;          //hodnota která je klikaná za interval
 
 let clickupgradePrice = 50;          //cena vylepšení
 let clickupgradeIncrease = 1;        //hodnota kterou klikneme
+
+let autograndmaPrice = 300;
+let autograndmaIncrease = 0;
+
+let autohousePrice = 800;
+let autohouseIncrease = 0;
 
 //    () => - arrow function
 cookie.onclick = () => {
@@ -42,4 +50,22 @@ autoclicker.onclick = () => {
     autoclickerIncrease++;
   }
 };
+
+autoclicker2.onclick = () => {
+  if (number >= autograndmaPrice) {
+    number -= autograndmaPrice;
+    counter.innerHTML = number;
+    autograndmaPrice *= 2;
+    autoclicker2.innerHTML = `Buy grandma: ${autograndmaPrice}`;
+    if (autograndmaIncrease == 0) {
+      setInterval(() => {
+        number += autograndmaIncrease;
+        counter.innerHTML = number;
+      }, 1000);  // to je za jak dlouho udělá click
+    }
+    autograndmaIncrease += 10;
+  }
+};
+
+
 
