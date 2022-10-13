@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Island+Moments&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box;
+    /*background: url(../img/background.jpg);*/
+}
+#head{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+#counter {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Bungee Spice';
+}
+.background {
+    background: url(../img/background.jpg);
+}
+#cookie {
+    max-width: 240px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: .2s ease;
+    cursor: pointer;
+}
+#cookie:hover {
+    transform: scale(1.1);
+}
+
+button {
+    border: none;
+    font-size: 20px;
+    display: table;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
