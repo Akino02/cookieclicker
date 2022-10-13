@@ -38,7 +38,7 @@ button {
     font-size: 20px;
     display: table;
     margin: 0 auto;
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    background: rgb(134, 125, 125);
     cursor: pointer;
 }
